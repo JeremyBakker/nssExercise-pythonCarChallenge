@@ -58,4 +58,13 @@ for make in makes:
                     if model_foreign_key == model_index:
                         if color_foreign_key == color_index:
                             inventory[make_name][model_name].append(color_name)
-print(inventory)
+
+# print(inventory)
+
+for key, value in inventory.items():
+  print(key)
+  print("-----------------------------")
+  for model in value:
+    print("{0} available in {1}.".format(model, ', '.join(value[model])))
+  print('\n')
+
